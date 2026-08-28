@@ -1,0 +1,110 @@
+# ==========================================
+# Bytecode y Caché de Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==========================================
+# Entornos Virtuales (Virtual Environments)
+# ==========================================
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+bin/
+include/
+lib/
+
+# ==========================================
+# Variables de Entorno y Credenciales
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.local.env
+
+# Mantener plantilla de variables de entorno
+!.env.example
+
+# ==========================================
+# Pytest, Cobertura y Linters
+# ==========================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+
+# ==========================================
+# Playwright y Artefactos de Pruebas E2E
+# ==========================================
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+traces/
+screenshots/
+videos/
+*.webm
+*.png.tmp
+
+# ==========================================
+# Logs y Archivos Temporales
+# ==========================================
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+
+# ==========================================
+# Editores e IDEs
+# ==========================================
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*~
+
+# ==========================================
+# Archivos del Sistema Operativo
+# ==========================================
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
