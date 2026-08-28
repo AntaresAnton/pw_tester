@@ -1,0 +1,1225 @@
+================================================================================
+  pw_tester - REGISTRO DE CI/CD Y AUDITORÍA DE SEGURIDAD
+  Fecha de Ejecución: 2026-08-28 14:42:55
+  Plugin: UpdraftPlus - Backup/Restore (v2.26.1.26)
+================================================================================
+
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ 🚀 Universal WordPress Plugin CI/CD & Security Tester (pw_tester)                                                                             │
+│ Plugin Detectado: UpdraftPlus - Backup/Restore (v2.26.1.26) | Autor: TeamUpdraft, DavidAnderson                                               │
+│ Archivo Principal: updraftplus.php | Archivos PHP: 376                                                                                        │
+│ Capacidades Detectadas: 18 AJAX | 0 Rutas REST | 2 Páginas Admin | IA: No | WooCommerce: Sí 🛍️                                                │
+│ PHP Binary: C:\Users\patri\AppData\Roaming\Local\lightning-services\php-8.2.29+0\bin\win64\php.exe | WP Target: https://pquintanilla.local    │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🔍 Ejecutando Análisis Estático y Auditoría de Seguridad PHP...
+
+                                                  Resultados del Análisis Estático y Seguridad                                                   
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                       ┃          ┃                     ┃ Alertas /            ┃
+┃ Archivo                                                                               ┃ Sintaxis ┃ Buenas Prácticas    ┃ Vulnerabilidades     ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━┩
+│ addons\anonymisation.php                                                              │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\autobackup.php                                                                 │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Escape de salida    │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ addons\azure.php                                                                      │ ✅ PASS  │ Escape de salida    │ Línea 263 [WARNING]: │
+│                                                                                       │          │ (Escaping)          │ Uso de               │
+│                                                                                       │          │ implementado.,      │ base64_decode()      │
+│                                                                                       │          │ Protección contra   │ detectado (verificar │
+│                                                                                       │          │ acceso directo de   │ si es                │
+│                                                                                       │          │ archivo (ABSPATH).  │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│                                                                                       │          │                     │ Línea 268 [WARNING]: │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ addons\backblaze.php                                                                  │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\cloudfiles-enhanced.php                                                        │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\dropbox-folders.php                                                            │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\fixtime.php                                                                    │ ✅ PASS  │ Sanitización de     │ 0 alertas            │
+│                                                                                       │          │ entradas            │                      │
+│                                                                                       │          │ utilizada., Uso     │                      │
+│                                                                                       │          │ seguro de           │                      │
+│                                                                                       │          │ wp_json_encode.     │                      │
+│ addons\google-enhanced.php                                                            │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\googlecloud.php                                                                │ ✅ PASS  │ Escape de salida    │ Línea 630 [WARNING]: │
+│                                                                                       │          │ (Escaping)          │ Uso de               │
+│                                                                                       │          │ implementado.,      │ base64_decode()      │
+│                                                                                       │          │ Protección contra   │ detectado (verificar │
+│                                                                                       │          │ acceso directo de   │ si es                │
+│                                                                                       │          │ archivo (ABSPATH).  │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│                                                                                       │          │                     │ Línea 824 [WARNING]: │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│                                                                                       │          │                     │ Línea 825 [WARNING]: │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ addons\importer.php                                                                   │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\incremental.php                                                                │ ✅ PASS  │ Uso seguro de       │ 0 alertas            │
+│                                                                                       │          │ wp_json_encode.,    │                      │
+│                                                                                       │          │ Escape de salida    │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ addons\lockadmin.php                                                                  │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ Nonce               │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Escape de salida    │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ addons\migrator.php                                                                   │ ✅ PASS  │ Uso seguro de       │ 0 alertas            │
+│                                                                                       │          │ wp_json_encode.,    │                      │
+│                                                                                       │          │ Escape de salida    │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ addons\moredatabase.php                                                               │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\morefiles.php                                                                  │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\morestorage.php                                                                │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\multisite.php                                                                  │ ✅ PASS  │ Sanitización de     │ 0 alertas            │
+│                                                                                       │          │ entradas            │                      │
+│                                                                                       │          │ utilizada., Escape  │                      │
+│                                                                                       │          │ de salida           │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ addons\noadverts.php                                                                  │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\onedrive.php                                                                   │ ✅ PASS  │ Sanitización de     │ Línea 723 [WARNING]: │
+│                                                                                       │          │ entradas            │ Uso de               │
+│                                                                                       │          │ utilizada., Escape  │ base64_decode()      │
+│                                                                                       │          │ de salida           │ detectado (verificar │
+│                                                                                       │          │ (Escaping)          │ si es                │
+│                                                                                       │          │ implementado.       │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ addons\pcloud.php                                                                     │ ✅ PASS  │ Escape de salida    │ Línea 676 [WARNING]: │
+│                                                                                       │          │ (Escaping)          │ Uso de               │
+│                                                                                       │          │ implementado.,      │ base64_decode()      │
+│                                                                                       │          │ Protección contra   │ detectado (verificar │
+│                                                                                       │          │ acceso directo de   │ si es                │
+│                                                                                       │          │ archivo (ABSPATH).  │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ addons\reporting.php                                                                  │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\s3-enhanced.php                                                                │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\sftp.php                                                                       │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\webdav.php                                                                     │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ addons\wp-cli.php                                                                     │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ admin.php                                                                             │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ Nonce               │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Verificación de     │                      │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.       │                      │
+│ backup.php                                                                            │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\bootstrap.php                                                                 │ ✅ PASS  │ Verificación de     │ Línea 262 [WARNING]: │
+│                                                                                       │          │ Nonce               │ Uso de               │
+│                                                                                       │          │ implementada.,      │ base64_decode()      │
+│                                                                                       │          │ Verificación de     │ detectado (verificar │
+│                                                                                       │          │ permisos/capacidad… │ si es                │
+│                                                                                       │          │ de usuario          │ criptografía/token   │
+│                                                                                       │          │ implementada.       │ legítimo).           │
+│ central\classes\automatic-upgrader-skin-compatibility.php                             │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\classes\class-automatic-upgrader-skin.php                                     │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\classes\class-updraftcentral-wp-upgrader.php                                  │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\commands.php                                                                  │ ✅ PASS  │ Verificación de     │ Línea 224 [WARNING]: │
+│                                                                                       │          │ permisos/capacidad… │ Uso de               │
+│                                                                                       │          │ de usuario          │ base64_decode()      │
+│                                                                                       │          │ implementada.,      │ detectado (verificar │
+│                                                                                       │          │ Protección contra   │ si es                │
+│                                                                                       │          │ acceso directo de   │ criptografía/token   │
+│                                                                                       │          │ archivo (ABSPATH).  │ legítimo).           │
+│ central\factory.php                                                                   │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\host.php                                                                      │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ Nonce               │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Verificación de     │                      │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.       │                      │
+│ central\listener.php                                                                  │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\modules\analytics.php                                                         │ ✅ PASS  │ Protección contra   │ Línea 192 [WARNING]: │
+│                                                                                       │          │ acceso directo de   │ Uso de               │
+│                                                                                       │          │ archivo (ABSPATH).  │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│                                                                                       │          │                     │ Línea 193 [WARNING]: │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│                                                                                       │          │                     │ Línea 267 [WARNING]: │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ central\modules\backups.php                                                           │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\modules\comments.php                                                          │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\modules\core.php                                                              │ ✅ PASS  │ Verificación de     │ Línea 110 [WARNING]: │
+│                                                                                       │          │ permisos/capacidad… │ Uso de               │
+│                                                                                       │          │ de usuario          │ base64_decode()      │
+│                                                                                       │          │ implementada.,      │ detectado (verificar │
+│                                                                                       │          │ Sanitización de     │ si es                │
+│                                                                                       │          │ entradas utilizada. │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ central\modules\media.php                                                             │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Sanitización de     │                      │
+│                                                                                       │          │ entradas utilizada. │                      │
+│ central\modules\pages.php                                                             │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\modules\plugin.php                                                            │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\modules\posts.php                                                             │ ✅ PASS  │ Verificación de     │ Línea 1990           │
+│                                                                                       │          │ permisos/capacidad… │ [WARNING]: Uso de    │
+│                                                                                       │          │ de usuario          │ base64_decode()      │
+│                                                                                       │          │ implementada.,      │ detectado (verificar │
+│                                                                                       │          │ Sanitización de     │ si es                │
+│                                                                                       │          │ entradas utilizada. │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ central\modules\reporting.php                                                         │ ✅ PASS  │ Verificación de     │ Línea 347 [WARNING]: │
+│                                                                                       │          │ permisos/capacidad… │ Uso de               │
+│                                                                                       │          │ de usuario          │ base64_decode()      │
+│                                                                                       │          │ implementada.,      │ detectado (verificar │
+│                                                                                       │          │ Sanitización de     │ si es                │
+│                                                                                       │          │ entradas utilizada. │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ central\modules\rest.php                                                              │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\modules\theme.php                                                             │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\modules\updates.php                                                           │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Escape de salida    │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ central\modules\users.php                                                             │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Escape de salida    │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ central\translations-central.php                                                      │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\updraftplus.php                                                               │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ central\wp-optimize.php                                                               │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ class-updraftplus.php                                                                 │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ Nonce               │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Sanitización de     │                      │
+│                                                                                       │          │ entradas utilizada. │                      │
+│ example-decrypt.php                                                                   │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\Backblaze\CurlClient.php                                                     │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\Dropbox2\API.php                                                             │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Dropbox2\Exception.php                                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Dropbox2\OAuth\Consumer\ConsumerAbstract.php                                 │ ✅ PASS  │ N/A                 │ Línea 236 [WARNING]: │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│                                                                                       │          │                     │ Línea 307 [WARNING]: │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ includes\Dropbox2\OAuth\Consumer\Curl.php                                             │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Dropbox2\OAuth\Consumer\WordPress.php                                        │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\Dropbox2\OAuth\Storage\Encrypter.php                                         │ ✅ PASS  │ N/A                 │ Línea 95 [WARNING]:  │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ includes\Dropbox2\OAuth\Storage\StorageInterface.php                                  │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Dropbox2\OAuth\Storage\WordPress.php                                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Auth\Abstract.php                                                     │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Auth\AppIdentity.php                                                  │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Auth\AssertionCredentials.php                                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Auth\ComputeEngine.php                                                │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Auth\Exception.php                                                    │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Auth\LoginTicket.php                                                  │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Auth\OAuth2.php                                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Auth\Simple.php                                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Cache\Abstract.php                                                    │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Cache\Apc.php                                                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Cache\Exception.php                                                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Cache\File.php                                                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Cache\Memcache.php                                                    │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Cache\Null.php                                                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Client.php                                                            │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Collection.php                                                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Config.php                                                            │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Exception.php                                                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Http\Batch.php                                                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Http\CacheParser.php                                                  │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Http\MediaFileUpload.php                                              │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Http\REST.php                                                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Http\Request.php                                                      │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\IO\Abstract.php                                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\IO\Curl.php                                                           │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\IO\Exception.php                                                      │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\IO\Stream.php                                                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Logger\Abstract.php                                                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Logger\Exception.php                                                  │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Logger\File.php                                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Logger\Null.php                                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Logger\Psr.php                                                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Model.php                                                             │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Service.php                                                           │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Service\CloudMonitoring.php                                           │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Service\Cloudsearch.php                                               │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Service\Datastore.php                                                 │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Service\Deploymentmanager.php                                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Service\Dns.php                                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Service\Drive.php                                                     │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Service\Exception.php                                                 │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Service\Logging.php                                                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Service\Manager.php                                                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Service\Oauth2.php                                                    │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Service\Resource.php                                                  │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Service\Storage.php                                                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Signer\Abstract.php                                                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Signer\P12.php                                                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Task\Exception.php                                                    │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Task\Retryable.php                                                    │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Task\Runner.php                                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Utils.php                                                             │ ✅ PASS  │ N/A                 │ Línea 42 [WARNING]:  │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ includes\Google\Utils\URITemplate.php                                                 │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Verifier\Abstract.php                                                 │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\Verifier\Pem.php                                                      │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\Google\autoload.php                                                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\Archive\Tar.php                                                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2.php                                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\Adapter.php                                               │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\Adapter\Curl.php                                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\Adapter\Mock.php                                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\Adapter\Socket.php                                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\ConnectionException.php                                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\CookieJar.php                                             │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\Exception.php                                             │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\LogicException.php                                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\MessageException.php                                      │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\MultipartBody.php                                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\NotImplementedException.php                               │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\Observer\Log.php                                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\Observer\UncompressingDownload.php                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\Response.php                                              │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\SOCKS5.php                                                │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\Request2\SocketWrapper.php                                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\WebDAV\Tools\_parse_lock_response.php                              │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\HTTP\WebDAV\Tools\_parse_propfind_response.php                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\Net\Socket.php                                                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\Net\URL.php                                                             │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\Net\URL2.php                                                            │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\PEAR.php                                                                │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\PEAR5.php                                                               │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\PEAR\PEAR\Exception.php                                                      │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\S3.php                                                                       │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ includes\S3compat.php                                                                 │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ includes\WindowsAzure\Blob\BlobRestProxy.php                                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Internal\IBlob.php                                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\AccessCondition.php                                 │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\AccessPolicy.php                                    │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\AcquireLeaseOptions.php                             │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\AcquireLeaseResult.php                              │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\Blob.php                                            │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\BlobBlockType.php                                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\BlobPrefix.php                                      │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\BlobProperties.php                                  │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\BlobServiceOptions.php                              │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\BlobType.php                                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\Block.php                                           │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\BlockList.php                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\BreakLeaseResult.php                                │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\CommitBlobBlocksOptions.php                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\Container.php                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\ContainerACL.php                                    │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\ContainerProperties.php                             │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\CopyBlobOptions.php                                 │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\CopyBlobResult.php                                  │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\CreateBlobBlockOptions.php                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\CreateBlobOptions.php                               │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\CreateBlobPagesOptions.php                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\CreateBlobPagesResult.php                           │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\CreateBlobSnapshotOptions.php                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\CreateBlobSnapshotResult.php                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\CreateContainerOptions.php                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\DeleteBlobOptions.php                               │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\DeleteContainerOptions.php                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\GetBlobMetadataOptions.php                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\GetBlobMetadataResult.php                           │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\GetBlobOptions.php                                  │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\GetBlobPropertiesOptions.php                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\GetBlobPropertiesResult.php                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\GetBlobResult.php                                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\GetContainerACLResult.php                           │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\GetContainerPropertiesResult.php                    │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\LeaseMode.php                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\ListBlobBlocksOptions.php                           │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\ListBlobBlocksResult.php                            │ ✅ PASS  │ N/A                 │ Línea 96 [WARNING]:  │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ includes\WindowsAzure\Blob\Models\ListBlobsOptions.php                                │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\ListBlobsResult.php                                 │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\ListContainersOptions.php                           │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\ListContainersResult.php                            │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\ListPageBlobRangesOptions.php                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\ListPageBlobRangesResult.php                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\PageRange.php                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\PageWriteOption.php                                 │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\PublicAccessType.php                                │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\SetBlobMetadataOptions.php                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\SetBlobMetadataResult.php                           │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\SetBlobPropertiesOptions.php                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\SetBlobPropertiesResult.php                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\SetContainerMetadataOptions.php                     │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Blob\Models\SignedIdentifier.php                                │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\CloudConfigurationManager.php                            │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Atom\AtomBase.php                               │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Atom\AtomLink.php                               │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Atom\Category.php                               │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Atom\Content.php                                │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Atom\Entry.php                                  │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Atom\Feed.php                                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Atom\Generator.php                              │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Atom\Person.php                                 │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Atom\Source.php                                 │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Authentication\IAuthScheme.php                  │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Authentication\OAuthScheme.php                  │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Authentication\SharedKeyAuthScheme.php          │ ✅ PASS  │ N/A                 │ Línea 132 [WARNING]: │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ includes\WindowsAzure\Common\Internal\Authentication\StorageAuthScheme.php            │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Authentication\TableSharedKeyLiteAuthScheme.php │ ✅ PASS  │ N/A                 │ Línea 113 [WARNING]: │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ includes\WindowsAzure\Common\Internal\ConnectionStringParser.php                      │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\ConnectionStringSource.php                      │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\FilterableService.php                           │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Filters\AuthenticationFilter.php                │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Filters\DateFilter.php                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Filters\ExponentialRetryPolicy.php              │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Filters\HeadersFilter.php                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Filters\RetryPolicy.php                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Filters\RetryPolicyFilter.php                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Filters\WrapFilter.php                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Http\BatchRequest.php                           │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Http\BatchResponse.php                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Http\HttpCallContext.php                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Http\HttpClient.php                             │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Http\IHttpClient.php                            │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Http\IUrl.php                                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Http\Url.php                                    │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\IServiceFilter.php                              │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\InvalidArgumentTypeException.php                │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Logger.php                                      │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\MediaServicesSettings.php                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\OAuthRestProxy.php                              │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Resources.php                                   │ ✅ PASS  │ N/A                 │ Línea 103 [WARNING]: │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ includes\WindowsAzure\Common\Internal\RestProxy.php                                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Serialization\ISerializer.php                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Serialization\JsonSerializer.php                │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Serialization\XmlSerializer.php                 │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\ServiceBusSettings.php                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\ServiceManagementSettings.php                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\ServiceRestProxy.php                            │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\ServiceSettings.php                             │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\StorageServiceSettings.php                      │ ✅ PASS  │ N/A                 │ Línea 181 [WARNING]: │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ includes\WindowsAzure\Common\Internal\Utilities.php                                   │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Internal\Validate.php                                    │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Models\GetServicePropertiesResult.php                    │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Models\Logging.php                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Models\Metrics.php                                       │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Models\OAuthAccessToken.php                              │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Models\RetentionPolicy.php                               │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\Models\ServiceProperties.php                             │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\ServiceException.php                                     │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\Common\ServicesBuilder.php                                      │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\WindowsAzure\WindowsAzure.php                                                │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\azure-extensions.php                                                         │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\checkout-embed\class-udp-checkout-embed.php                                  │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-backup-history.php                                                     │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-commands.php                                                           │ ✅ PASS  │ Sanitización de     │ Línea 825 [WARNING]: │
+│                                                                                       │          │ entradas            │ Uso de               │
+│                                                                                       │          │ utilizada., Escape  │ base64_decode()      │
+│                                                                                       │          │ de salida           │ detectado (verificar │
+│                                                                                       │          │ (Escaping)          │ si es                │
+│                                                                                       │          │ implementado.       │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ includes\class-database-utility.php                                                   │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-filesystem-functions.php                                               │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-http-error-descriptions.php                                            │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-job-scheduler.php                                                      │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-manipulation-functions.php                                             │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-onedrive-account.php                                                   │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-partialfileservlet.php                                                 │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\class-remote-send.php                                                        │ ✅ PASS  │ Sanitización de     │ Línea 169 [WARNING]: │
+│                                                                                       │          │ entradas            │ Uso de               │
+│                                                                                       │          │ utilizada., Escape  │ base64_decode()      │
+│                                                                                       │          │ de salida           │ detectado (verificar │
+│                                                                                       │          │ (Escaping)          │ si es                │
+│                                                                                       │          │ implementado.       │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ includes\class-search-replace.php                                                     │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-semaphore.php                                                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\class-storage-methods-interface.php                                          │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-updraft-dashboard-news-offer.php                                       │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ Nonce               │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Escape de salida    │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ includes\class-updraft-dashboard-news.php                                             │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ Nonce               │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Escape de salida    │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ includes\class-updraft-semaphore.php                                                  │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-updraftcentral-updraftplus-commands.php                                │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-updraftplus-encryption.php                                             │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-wpadmin-commands.php                                                   │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\class-zip.php                                                                │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\cloudfiles\cloudfiles.php                                                    │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\cloudfiles\cloudfiles_exceptions.php                                         │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\cloudfiles\cloudfiles_http.php                                               │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\ftp.class.php                                                                │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\google-extensions.php                                                        │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\migrator-lite.php                                                            │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\onedrive\client.php                                                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\onedrive\file.php                                                            │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\onedrive\folder.php                                                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\onedrive\object.php                                                          │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\onedrive\onedrive.php                                                        │ ✅ PASS  │ N/A                 │ 0 alertas            │
+│ includes\pcloud\UpdraftPlus_Pcloud_API.php                                            │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\updraft-restorer-skin-compatibility.php                                      │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\updraft-restorer-skin.php                                                    │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\updraftcentral.php                                                           │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\updraftclone\temporary-clone-auto-login.php                                  │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\updraftclone\temporary-clone-dash-notice.php                                 │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ Nonce               │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Verificación de     │                      │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.       │                      │
+│ includes\updraftclone\temporary-clone-restore.php                                     │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\updraftclone\temporary-clone-status.php                                      │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\updraftclone\temporary-clone-user-notice.php                                 │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ Nonce               │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Verificación de     │                      │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.       │                      │
+│ includes\updraftplus-clone.php                                                        │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\updraftplus-login.php                                                        │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\updraftplus-notices.php                                                      │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ includes\updraftplus-tour.php                                                         │ ✅ PASS  │ Sanitización de     │ 0 alertas            │
+│                                                                                       │          │ entradas            │                      │
+│                                                                                       │          │ utilizada., Escape  │                      │
+│                                                                                       │          │ de salida           │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ includes\updraftvault.php                                                             │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\addon-base-v2.php                                                             │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\addon-not-yet-present.php                                                     │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\azure.php                                                                     │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\backblaze.php                                                                 │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\backup-module.php                                                             │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ Nonce               │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Escape de salida    │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ methods\cloudfiles-new.php                                                            │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\cloudfiles.php                                                                │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\dreamobjects.php                                                              │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\dropbox.php                                                                   │ ✅ PASS  │ Escape de salida    │ Línea 1034           │
+│                                                                                       │          │ (Escaping)          │ [WARNING]: Uso de    │
+│                                                                                       │          │ implementado.,      │ base64_decode()      │
+│                                                                                       │          │ Protección contra   │ detectado (verificar │
+│                                                                                       │          │ acceso directo de   │ si es                │
+│                                                                                       │          │ archivo (ABSPATH).  │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│                                                                                       │          │                     │ Línea 1055           │
+│                                                                                       │          │                     │ [WARNING]: Uso de    │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│                                                                                       │          │                     │ Línea 1059           │
+│                                                                                       │          │                     │ [WARNING]: Uso de    │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ methods\email.php                                                                     │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\ftp.php                                                                       │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\googlecloud.php                                                               │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\googledrive.php                                                               │ ✅ PASS  │ Escape de salida    │ Línea 516 [WARNING]: │
+│                                                                                       │          │ (Escaping)          │ Uso de               │
+│                                                                                       │          │ implementado.,      │ base64_decode()      │
+│                                                                                       │          │ Protección contra   │ detectado (verificar │
+│                                                                                       │          │ acceso directo de   │ si es                │
+│                                                                                       │          │ archivo (ABSPATH).  │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│                                                                                       │          │                     │ Línea 517 [WARNING]: │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│                                                                                       │          │                     │ Línea 879 [WARNING]: │
+│                                                                                       │          │                     │ Uso de               │
+│                                                                                       │          │                     │ base64_decode()      │
+│                                                                                       │          │                     │ detectado (verificar │
+│                                                                                       │          │                     │ si es                │
+│                                                                                       │          │                     │ criptografía/token   │
+│                                                                                       │          │                     │ legítimo).           │
+│ methods\insufficient.php                                                              │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\onedrive.php                                                                  │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\openstack-base.php                                                            │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\openstack.php                                                                 │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\openstack2.php                                                                │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\pcloud.php                                                                    │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\remotesend.php                                                                │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\s3.php                                                                        │ ✅ PASS  │ Sanitización de     │ 0 alertas            │
+│                                                                                       │          │ entradas            │                      │
+│                                                                                       │          │ utilizada., Escape  │                      │
+│                                                                                       │          │ de salida           │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ methods\s3generic.php                                                                 │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\sftp.php                                                                      │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\template.php                                                                  │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\updraftvault.php                                                              │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ methods\webdav.php                                                                    │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ options.php                                                                           │ ✅ PASS  │ Verificación de     │ 0 alertas            │
+│                                                                                       │          │ permisos/capacidad… │                      │
+│                                                                                       │          │ de usuario          │                      │
+│                                                                                       │          │ implementada.,      │                      │
+│                                                                                       │          │ Sanitización de     │                      │
+│                                                                                       │          │ entradas utilizada. │                      │
+│ restorer.php                                                                          │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\advanced\advanced-tools.php                                        │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\advanced\cron-events.php                                           │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\advanced\db-size.php                                               │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\advanced\export-settings.php                                       │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\advanced\lock-admin.php                                            │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\advanced\search-replace.php                                        │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\advanced\site-info.php                                             │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\advanced\tools-menu.php                                            │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\advanced\total-size.php                                            │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\advanced\updraftcentral.php                                        │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\advanced\wipe-settings.php                                         │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\notices\autobackup-notice.php                                      │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\notices\bottom-notice.php                                          │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\notices\button-label.php                                           │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\notices\horizontal-notice.php                                      │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\notices\report-plain.php                                           │ ✅ PASS  │ Sanitización de     │ 0 alertas            │
+│                                                                                       │          │ entradas            │                      │
+│                                                                                       │          │ utilizada., Escape  │                      │
+│                                                                                       │          │ de salida           │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+│ templates\wp-admin\notices\report.php                                                 │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\notices\thanks-for-using-main-dash.php                             │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\backupnow-modal.php                                       │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\delete-and-restore-modals.php                             │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\downloading-and-restoring.php                             │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\exclude-modal.php                                         │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\exclude-settings-modal\exclude-panel-heading.php          │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\exclude-settings-modal\exclude-panel-submit.php           │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\existing-backups-table.php                                │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\file-backup-exclude.php                                   │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\footer.php                                                │ ✅ PASS  │ Protección contra   │ 0 alertas            │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\form-contents.php                                         │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\header.php                                                │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\migrator-no-migrator.php                                  │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\tab-addons.php                                            │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\tab-backups.php                                           │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\tab-bar.php                                               │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\take-backup.php                                           │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\temporary-clone.php                                       │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\updraftcentral-connect.php                                │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ templates\wp-admin\settings\upload-backups-modal.php                                  │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ udaddons\options.php                                                                  │ ✅ PASS  │ Escape de salida    │ 0 alertas            │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.,      │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ udaddons\updraftplus-addons.php                                                       │ ✅ PASS  │ Verificación de     │ Línea 597 [WARNING]: │
+│                                                                                       │          │ Nonce               │ Uso de               │
+│                                                                                       │          │ implementada.,      │ base64_decode()      │
+│                                                                                       │          │ Verificación de     │ detectado (verificar │
+│                                                                                       │          │ permisos/capacidad… │ si es                │
+│                                                                                       │          │ de usuario          │ criptografía/token   │
+│                                                                                       │          │ implementada.       │ legítimo).           │
+│ udaddons\updraftplus-cli-command-base.php                                             │ ✅ PASS  │ Sanitización de     │ 0 alertas            │
+│                                                                                       │          │ entradas            │                      │
+│                                                                                       │          │ utilizada.,         │                      │
+│                                                                                       │          │ Protección contra   │                      │
+│                                                                                       │          │ acceso directo de   │                      │
+│                                                                                       │          │ archivo (ABSPATH).  │                      │
+│ updraftplus.php                                                                       │ ✅ PASS  │ Sanitización de     │ 0 alertas            │
+│                                                                                       │          │ entradas            │                      │
+│                                                                                       │          │ utilizada., Escape  │                      │
+│                                                                                       │          │ de salida           │                      │
+│                                                                                       │          │ (Escaping)          │                      │
+│                                                                                       │          │ implementado.       │                      │
+└───────────────────────────────────────────────────────────────────────────────────────┴──────────┴─────────────────────┴──────────────────────┘
+
+Resumen: 376/376 archivos pasaron sintaxis con éxito. Fallos de Sintaxis: 0 | Alertas de Seguridad: 33
+
+
+======================================================================
+
+
+🧪 Ejecutando Suite Universal de Pruebas Pytest ...
+
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\patri\AppData\Local\Programs\Python\Python312\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\patri\OneDrive\Desktop\updraftplus\pw_tester
+plugins: anyio-4.13.0, hydra-core-1.3.4, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 11 items
+
+tests/test_01_php_syntax_and_security.py::TestUniversalPHPSyntaxAndSecurity::test_all_php_files_pass_syntax_check PASSED [  9%]
+tests/test_01_php_syntax_and_security.py::TestUniversalPHPSyntaxAndSecurity::test_main_plugin_file_has_valid_headers PASSED [ 18%]
+tests/test_01_php_syntax_and_security.py::TestUniversalPHPSyntaxAndSecurity::test_direct_file_access_prevention PASSED [ 27%]
+tests/test_01_php_syntax_and_security.py::TestUniversalPHPSyntaxAndSecurity::test_ajax_handlers_security PASSED [ 36%]
+tests/test_02_mock_llm_integration.py::TestUniversalMockLLMIntegration::test_mock_server_root_health SKIPPED [ 45%]
+tests/test_02_mock_llm_integration.py::TestUniversalMockLLMIntegration::test_ollama_tags_endpoint_returns_models SKIPPED [ 54%]
+tests/test_02_mock_llm_integration.py::TestUniversalMockLLMIntegration::test_ollama_generate_returns_valid_json_schema SKIPPED [ 63%]
+tests/test_02_mock_llm_integration.py::TestUniversalMockLLMIntegration::test_openai_chat_completions_schema SKIPPED [ 72%]
+tests/test_03_rest_api.py::TestUniversalRestAPIEndpoints::test_discovered_rest_routes_have_permission_callbacks SKIPPED [ 81%]
+tests/test_03_rest_api.py::TestUniversalRestAPIEndpoints::test_unauthenticated_requests_are_rejected SKIPPED [ 90%]
+tests/test_04_e2e_playwright.py::TestUniversalPlaywrightE2E::test_discovered_admin_pages_load_cleanly SKIPPED [100%]
+
+======================== 4 passed, 7 skipped in 17.48s ========================
+
+======================================================================
+
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ 🎉 ¡TODOS LOS TESTS DE 'UpdraftPlus - Backup/Restore' PASARON EXITOSAMENTE EN 29.93s! 🎉                                                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯

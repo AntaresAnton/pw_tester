@@ -48,10 +48,39 @@ MOCK_LLM_HOST = os.getenv("MOCK_LLM_HOST", "127.0.0.1")
 MOCK_LLM_PORT = int(os.getenv("MOCK_LLM_PORT", "11435"))  # Dedicated mock port
 MOCK_LLM_URL = f"http://{MOCK_LLM_HOST}:{MOCK_LLM_PORT}"
 
-# PHP Binary auto-detection
-DEFAULT_LOCAL_PHP = r"C:\Users\patri\AppData\Roaming\Local\lightning-services\php-8.2.29+0\bin\win64\php.exe"
-PHP_EXECUTABLE = os.getenv("PHP_EXECUTABLE", DEFAULT_LOCAL_PHP if os.path.exists(DEFAULT_LOCAL_PHP) else "php")
+def find_php_binary() -> str:
+    """Finds the best available PHP binary on the system or in Local WP installation."""
+    env_php = os.getenv("PHP_EXECUTABLE", "").strip()
+    if env_php and os.path.exists(env_php):
+        return env_php
+
+    # 1. Check Local by Flywheel lightning-services PHP binaries
+    appdata = os.getenv("APPDATA", "")
+    if appdata:
+        local_services = Path(appdata) / "Local" / "lightning-services"
+        if local_services.exists():
+            for php_dir in sorted(local_services.glob("php-*"), reverse=True):
+                candidate = php_dir / "bin" / "win64" / "php.exe"
+                if candidate.exists():
+                    return str(candidate)
+
+    # 2. Check DEFAULT_LOCAL_PHP
+    default_local = r"C:\Users\patri\AppData\Roaming\Local\lightning-services\php-8.2.29+0\bin\win64\php.exe"
+    if os.path.exists(default_local):
+        return default_local
+
+    # 3. Check system PATH
+    import shutil
+    which_php = shutil.which("php")
+    if which_php:
+        return which_php
+
+    return "php"
+
+
+PHP_EXECUTABLE = find_php_binary()
 
 # Playwright Browser Configuration
 HEADLESS = os.getenv("HEADLESS", "true").lower() in ("true", "1", "yes")
 BROWSER_TIMEOUT = int(os.getenv("BROWSER_TIMEOUT", "15000"))
+

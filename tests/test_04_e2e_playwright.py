@@ -59,8 +59,10 @@ class TestUniversalPlaywrightE2E:
         """Visits each discovered admin page slug and verifies 0 fatal JS console errors."""
         page, js_errors = browser_page
 
-        if "wp-login.php" in page.url:
-            pytest.skip("Se requiere configurar WP_ADMIN_USER y WP_ADMIN_PASS válidos en .env para E2E.")
+        # Verify login succeeded
+        content = page.content().lower()
+        if "wp-login.php" in page.url or "no tienes permisos" in content or "you do not have permission" in content:
+            pytest.skip("Se requiere configurar WP_ADMIN_USER y WP_ADMIN_PASS de un administrador válido en .env para E2E.")
 
         admin_pages = PLUGIN_INFO.get("admin_pages", [])
         for page_info in admin_pages[:3]:  # Test up to first 3 pages
@@ -78,8 +80,13 @@ class TestUniversalPlaywrightE2E:
             page.goto(target_url)
             page.wait_for_load_state("domcontentloaded")
 
+            content = page.content().lower()
+            if "no tienes permisos" in content or "you do not have permission" in content:
+                pytest.skip("El usuario configurado en .env no tiene permisos para acceder a esta página de administración.")
+
             # Verify page has rendered
             expect(page.locator(".wrap, #wpbody-content")).to_be_visible()
 
         # Check for 0 fatal JS errors
         assert len(js_errors) == 0, f"Errores JavaScript detectados en consola: {js_errors}"
+

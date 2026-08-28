@@ -196,12 +196,26 @@ class PluginDetector:
 
     def detect_ai_capabilities(self, php_files: List[Path]) -> bool:
         """Detects if the plugin interfaces with LLMs or AI providers."""
-        keywords = ("ollama", "openai", "groq", "together", "anthropic", "gemini", "llama", "deepseek", "chat/completions", "api/generate")
+        ai_patterns = (
+            r"\bollama\b",
+            r"\bopenai\b",
+            r"\bgroq\b",
+            r"\btogether\.ai\b",
+            r"\bapi\.together\b",
+            r"\banthropic\b",
+            r"\bgemini\b",
+            r"\bllama[-_]?[234]?\b",
+            r"\bdeepseek\b",
+            r"chat/completions",
+            r"api/generate",
+            r"models/gemini",
+        )
         for f in php_files:
             try:
                 content = f.read_text(encoding="utf-8", errors="ignore").lower()
-                if any(kw in content for kw in keywords):
-                    return True
+                for pat in ai_patterns:
+                    if re.search(pat, content):
+                        return True
             except Exception:
                 continue
         return False
@@ -217,3 +231,4 @@ class PluginDetector:
             except Exception:
                 continue
         return False
+

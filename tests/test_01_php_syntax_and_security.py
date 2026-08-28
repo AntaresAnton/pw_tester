@@ -16,16 +16,11 @@ class TestUniversalPHPSyntaxAndSecurity:
         self.linter = PHPLinter(PLUGIN_ROOT)
 
     def test_all_php_files_pass_syntax_check(self):
-        """Validates that every PHP file in the plugin passes php -l with 0 syntax errors."""
-        php_files = self.linter.get_php_files()
-        assert len(php_files) > 0, f"No se encontraron archivos PHP en el directorio {PLUGIN_ROOT}."
+        """Validates that every PHP file in the plugin passes php -l with 0 syntax errors in parallel."""
+        results = self.linter.check_all_syntax_parallel()
+        assert len(results) > 0, f"No se encontraron archivos PHP en el directorio {PLUGIN_ROOT}."
 
-        failed_files = []
-        for file_path in php_files:
-            ok, msg = self.linter.check_syntax(file_path)
-            if not ok:
-                failed_files.append((str(file_path.name), msg))
-
+        failed_files = [(str(f.name), msg) for f, ok, msg in results if not ok]
         assert len(failed_files) == 0, f"Archivos PHP con errores de sintaxis: {failed_files}"
 
     def test_main_plugin_file_has_valid_headers(self):
@@ -40,18 +35,18 @@ class TestUniversalPHPSyntaxAndSecurity:
         assert PLUGIN_INFO["version"], "La versión del plugin no pudo ser extraída."
 
     def test_direct_file_access_prevention(self):
-        """Verifies that PHP files implement direct execution protection (ABSPATH check)."""
+        """Verifies that PHP files implement direct execution protection or are non-executable libraries."""
         php_files = self.linter.get_php_files()
         unprotected_files = []
 
         for f in php_files:
             content = f.read_text(encoding="utf-8", errors="ignore")
-            # If the file contains executable PHP code (not just pure template/views)
+            # If the file contains PHP code and is not protected or a safe class declaration
             if "<?php" in content and len(content.strip().splitlines()) > 5:
-                if not ("ABSPATH" in content or "WPINC" in content):
-                    unprotected_files.append(f.name)
+                if not self.linter.has_direct_access_protection(f, content):
+                    unprotected_files.append(str(f.relative_to(PLUGIN_ROOT)))
 
-        assert len(unprotected_files) == 0, f"Archivos sin comprobación if ( ! defined( 'ABSPATH' ) ) exit: {unprotected_files}"
+        assert len(unprotected_files) == 0, f"Archivos sin protección contra ejecución directa: {unprotected_files}"
 
     def test_ajax_handlers_security(self):
         """Verifies that discovered AJAX actions implement Nonce and Capability checks."""
@@ -60,3 +55,4 @@ class TestUniversalPHPSyntaxAndSecurity:
             pytest.skip("El plugin no registra acciones AJAX (wp_ajax_).")
 
         assert len(ajax_actions) > 0
+

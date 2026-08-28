@@ -5,6 +5,7 @@ Universal CLI Runner and Test Orchestrator for ANY WordPress Plugin (pw_tester).
 import sys
 import subprocess
 import time
+from datetime import datetime
 from pathlib import Path
 
 # Ensure UTF-8 output on Windows consoles
@@ -23,7 +24,8 @@ from rich.progress import Progress, SpinnerColumn, TextColumn
 from php_linter import PHPLinter
 from config import BASE_DIR, PLUGIN_ROOT, PHP_EXECUTABLE, WP_SITE_URL, MOCK_LLM_URL, PLUGIN_INFO
 
-console = Console(force_terminal=True, legacy_windows=False)
+# Console with recording enabled for log.txt export
+console = Console(record=True, force_terminal=True, legacy_windows=False)
 
 
 def print_banner():
@@ -80,7 +82,7 @@ def run_lint_command():
 
 
 def run_pytest_suite(suite_name: str = ""):
-    """Runs pytest with structured output."""
+    """Runs pytest with live streamed output so all results are recorded in log.txt."""
     console.print(f"\n[bold yellow]🧪 Ejecutando Suite Universal de Pruebas Pytest {suite_name}...[/bold yellow]\n")
 
     cmd = [sys.executable, "-m", "pytest", "-v", "--tb=short"]
@@ -89,8 +91,22 @@ def run_pytest_suite(suite_name: str = ""):
     else:
         cmd.append("tests")
 
-    res = subprocess.run(cmd, cwd=str(BASE_DIR), check=False)
-    return res.returncode == 0
+    proc = subprocess.Popen(
+        cmd,
+        cwd=str(BASE_DIR),
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        encoding="utf-8",
+        errors="replace"
+    )
+
+    if proc.stdout:
+        for line in iter(proc.stdout.readline, ""):
+            console.print(line, end="")
+
+    proc.wait()
+    return proc.returncode == 0
 
 
 def run_mock_server_command():
@@ -101,8 +117,30 @@ def run_mock_server_command():
     start_server()
 
 
+def save_log_file():
+    """Exports recorded console output to log.txt without ANSI escape codes."""
+    try:
+        log_path = BASE_DIR / "log.txt"
+        now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        plain_text = console.export_text()
+        divider = "=" * 80
+        header = (
+            f"{divider}\n"
+            f"  pw_tester - REGISTRO DE CI/CD Y AUDITORÍA DE SEGURIDAD\n"
+            f"  Fecha de Ejecución: {now_str}\n"
+            f"  Plugin: {PLUGIN_INFO.get('name', 'WordPress Plugin')} (v{PLUGIN_INFO.get('version', '1.0.0')})\n"
+            f"{divider}\n\n"
+        )
+        
+        log_path.write_text(header + plain_text, encoding="utf-8")
+        console.print(f"\n[bold green]📄 Registro completo guardado exitosamente en:[/bold green] [cyan]{log_path}[/cyan]\n")
+    except Exception as e:
+        console.print(f"[red]Error al guardar log.txt: {e}[/red]")
+
+
+
 def run_full_pipeline():
-    """Runs the complete universal CI/CD pipeline."""
+    """Runs the complete universal CI/CD pipeline and saves log.txt."""
     print_banner()
 
     start_time = time.time()
@@ -120,6 +158,8 @@ def run_full_pipeline():
     else:
         console.print(Panel(f"[bold red]❌ HUBO FALLOS EN EL PIPELINE DE CI/CD ({elapsed}s). Revisa el registro superior.[/bold red]", border_style="red"))
 
+    save_log_file()
+
 
 def main():
     if len(sys.argv) < 2 or sys.argv[1] in ("all", "ci"):
@@ -127,6 +167,7 @@ def main():
     elif sys.argv[1] == "lint":
         print_banner()
         run_lint_command()
+        save_log_file()
     elif sys.argv[1] == "mock":
         print_banner()
         run_mock_server_command()
@@ -134,9 +175,10 @@ def main():
         print_banner()
         suite = sys.argv[2] if len(sys.argv) > 2 else ""
         run_pytest_suite(suite)
+        save_log_file()
     else:
         console.print("[yellow]Comandos disponibles:[/yellow]")
-        console.print("  python cli_runner.py all      -> Ejecuta CI/CD universal completo (Linter + Pytest)")
+        console.print("  python cli_runner.py all      -> Ejecuta CI/CD universal completo (Linter + Pytest + Log)")
         console.print("  python cli_runner.py lint     -> Ejecuta únicamente el linter de PHP y seguridad")
         console.print("  python cli_runner.py test     -> Ejecuta todas las suites de Pytest")
         console.print("  python cli_runner.py mock     -> Inicia el servidor Mock LLM independiente")
@@ -144,3 +186,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
